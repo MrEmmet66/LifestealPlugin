@@ -1,0 +1,4 @@
+name: LifestealPlugin
+version: '1.0'
+main: org.mbf.lifestealplugin.LifestealPlugin
+api-version: '1.20'

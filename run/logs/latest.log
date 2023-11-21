@@ -1,0 +1,37 @@
+[10:20:38] [ServerMain/INFO]: Environment: Environment[accountsHost=https://api.mojang.com, sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[10:20:39] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
+[10:20:42] [ServerMain/ERROR]: No key layers in MapLike[{}]
+[10:20:45] [ServerMain/INFO]: Loaded 7 recipes
+[10:20:46] [Server thread/INFO]: Starting minecraft server version 1.20.2
+[10:20:46] [Server thread/INFO]: Loading properties
+[10:20:46] [Server thread/INFO]: This server is running Paper version git-Paper-297 (MC: 1.20.2) (Implementing API version 1.20.2-R0.1-SNAPSHOT) (Git: 250388d)
+[10:20:47] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:20:47] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:20:48] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 1 worker threads, and gen parallelism of 1 threads
+[10:20:48] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[10:20:48] [Server thread/INFO]: Default game type: SURVIVAL
+[10:20:48] [Server thread/INFO]: Generating keypair
+[10:20:49] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:20:49] [Server thread/INFO]: Using default channel type
+[10:20:49] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[10:20:49] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[10:20:49] [Server thread/INFO]: [LifestealPlugin] Loading server plugin LifestealPlugin v1.0
+[10:20:49] [Server thread/INFO]: Preparing level "world"
+[10:20:49] [Server thread/ERROR]: No key layers in MapLike[{}]
+[10:20:51] [Server thread/ERROR]: No key layers in MapLike[{}]
+[10:20:57] [Server thread/ERROR]: No key layers in MapLike[{}]
+[10:20:58] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[10:20:59] [Server thread/INFO]: Time elapsed: 207 ms
+[10:20:59] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[10:20:59] [Server thread/INFO]: Time elapsed: 182 ms
+[10:20:59] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[10:20:59] [Server thread/INFO]: Time elapsed: 108 ms
+[10:20:59] [Server thread/INFO]: [LifestealPlugin] Enabling LifestealPlugin v1.0
+[10:20:59] [Server thread/INFO]: Running delayed init tasks
+[10:20:59] [Server thread/INFO]: Done (13.025s)! For help, type "help"
+[10:20:59] [Server thread/INFO]: Timings Reset
+[10:22:18] [Server thread/INFO]: Server Plugins (1):
+[10:22:18] [Server thread/INFO]: Bukkit Plugins:
+[10:22:18] [Server thread/INFO]:  - LifestealPlugin
