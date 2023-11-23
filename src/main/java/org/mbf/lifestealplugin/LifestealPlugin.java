@@ -9,7 +9,6 @@ public final class LifestealPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         CustomRecipes.registerRecipes();
-        getCommand("test").setExecutor(new TestCommand());
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
     }

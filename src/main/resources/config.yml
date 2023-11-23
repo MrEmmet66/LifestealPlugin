@@ -1,0 +1,5 @@
+max-hearts: 25
+drop-hearts: 1
+drop-fragments: 1
+health-when-drop-fragments: 15
+remove-hearts: 1

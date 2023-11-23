@@ -8,6 +8,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.persistence.PersistentDataType;
+import org.mbf.lifestealplugin.LifestealPlugin;
 import org.mbf.lifestealplugin.items.HeartCreator;
 import org.mbf.lifestealplugin.items.HeartFragmentCreator;
 import org.mbf.lifestealplugin.items.ItemKeys;
@@ -17,15 +18,16 @@ import java.net.http.WebSocket;
 public class PlayerListener implements Listener {
     private final HeartCreator heartCreator = new HeartCreator();
     private final HeartFragmentCreator heartFragmentCreator = new HeartFragmentCreator();
+    private final LifestealPlugin plugin = LifestealPlugin.getPlugin();
+
     @EventHandler
     public void onItemUse(PlayerInteractEvent e) {
         if(e.getAction().isLeftClick() || e.getAction() != Action.RIGHT_CLICK_AIR)
             return;
         if(!e.getItem().getItemMeta().getPersistentDataContainer().has(ItemKeys.HEART_KEY, PersistentDataType.BOOLEAN)) {
-            e.getPlayer().sendMessage("You don't have a heart in your hand");
             return;
         }
-        if(e.getPlayer().getMaxHealth() >= 50) {
+        if(e.getPlayer().getMaxHealth() >= plugin.getConfig().getInt("maxHearts") * 2) {
             e.getPlayer().sendMessage("You already have max hearts");
             return;
         }
@@ -38,10 +40,10 @@ public class PlayerListener implements Listener {
     public void onPlayerDeath(PlayerDeathEvent e) {
         if(e.getEntity().getKiller() == null)
             return;
-        if(e.getEntity().getKiller().getMaxHealth() >= 30)
-            e.getDrops().add(heartFragmentCreator.create(1));
+        if(e.getEntity().getKiller().getMaxHealth() >= plugin.getConfig().getInt("health-when-drop-fragments") * 2)
+            e.getDrops().add(heartFragmentCreator.create(plugin.getConfig().getInt("drop-fragments")));
         else
-            e.getDrops().add(heartCreator.createHeart(1));
-        e.getPlayer().setMaxHealth(e.getPlayer().getMaxHealth() -2);
+            e.getDrops().add(heartCreator.createHeart(plugin.getConfig().getInt("drop-hearts")));
+        e.getPlayer().setMaxHealth(e.getPlayer().getMaxHealth() - plugin.getConfig().getInt("remove-hearts") * 2);
     }
 }
