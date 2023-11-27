@@ -29,5 +29,12 @@ public class CustomRecipes {
         heartRecipe.setIngredient('F', new RecipeChoice.ExactChoice(fragment));
         heartRecipe.setIngredient('E', Material.ELYTRA);
         Bukkit.addRecipe(heartRecipe);
+
+        ShapedRecipe reviveBeaconRecipe = new ShapedRecipe(new NamespacedKey(LifestealPlugin.getPlugin(), "ReviveBeaconRecipe"), new ReviveBeaconCreator().create(1));
+        reviveBeaconRecipe.shape("HHH", "HTH", "HHH");
+        reviveBeaconRecipe.setIngredient('H', new RecipeChoice.ExactChoice(new HeartCreator().createHeart(1)));
+        reviveBeaconRecipe.setIngredient('T', Material.TOTEM_OF_UNDYING);
+        Bukkit.addRecipe(reviveBeaconRecipe);
+
     }
 }

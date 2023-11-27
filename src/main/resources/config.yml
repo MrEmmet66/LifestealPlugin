@@ -1,5 +1,22 @@
+## All numbers are in hearts, so in code this values will be multiplied by 2
+
+# Max hearts that player can get
 max-hearts: 25
+
+# Hearts that will drop from the player after death
 drop-hearts: 1
+
+# Fragments that will drop from the player after death
 drop-fragments: 1
+
+# Number of hearts when killer will get fragments instead of hearts
 health-when-drop-fragments: 15
+
+# Number of fragments that player will lose after death
 remove-hearts: 1
+
+# Number of revive beacon that can be crafted by player
+max-revive-beacons: 5
+
+# Number of hearts that player will get after revive
+health-after-revive: 3
